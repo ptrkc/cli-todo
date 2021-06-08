@@ -58,9 +58,9 @@ function add() {
 }
 
 function list() {
-    console.log("\n==================");
+    console.log("\n============================");
     todoData.forEach((t) => console.log(formatTasks(t)));
-    console.log("==================\n");
+    console.log("============================\n");
 }
 
 function check() {
