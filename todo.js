@@ -10,7 +10,6 @@ if (todoExists) {
 }
 
 showBanner();
-mainMenu();
 
 function showBanner() {
     const todo =
@@ -25,8 +24,15 @@ function showBanner() {
 ‖==========‖`);
 }
 
-function mainMenu() {
+while (true) {
     checkPomodoro();
+    const exit = mainMenu();
+    if (exit) {
+        break;
+    }
+}
+
+function mainMenu() {
     const options = ["add"];
     if (todoData && todoData.todos.length > 0) {
         options.push("list", "check", "remove", "pomodoro");
@@ -48,6 +54,8 @@ function mainMenu() {
         case "pomodoro":
             pomodoro();
             break;
+        default:
+            return true;
     }
 }
 
@@ -69,7 +77,8 @@ function list() {
             (t.done ? "🟢 " : "🔴 ") +
                 t.todo +
                 " " +
-                String("🍅").repeat(t.pomodoros)
+                String("🍅").repeat(t.pomodoros) +
+                (t.pomodoroStart !== 0 ? "⏲️" : "")
         )
     );
     console.log("==================\n");
