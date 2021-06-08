@@ -90,7 +90,8 @@ function check() {
             (t.done ? "🟢 " : "🔴 ") +
             t.todo +
             " " +
-            String("🍅").repeat(t.pomodoros)
+            String("🍅").repeat(t.pomodoros) +
+            (t.pomodoroStart !== 0 ? "⏲️" : "")
     );
     const checkQuestion = readlineSync.keyInSelect(
         options,
@@ -109,7 +110,8 @@ function remove() {
             (t.done ? "🟢 " : "🔴 ") +
             t.todo +
             " " +
-            String("🍅").repeat(t.pomodoros)
+            String("🍅").repeat(t.pomodoros) +
+            (t.pomodoroStart !== 0 ? "⏲️" : "")
     );
     const checkQuestion = readlineSync.keyInSelect(
         options,
@@ -128,7 +130,8 @@ function pomodoro() {
             (t.done ? "🟢 " : "🔴 ") +
             t.todo +
             " " +
-            String("🍅").repeat(t.pomodoros)
+            String("🍅").repeat(t.pomodoros) +
+            (t.pomodoroStart !== 0 ? "⏲️" : "")
     );
     const checkQuestion = readlineSync.keyInSelect(
         options,
