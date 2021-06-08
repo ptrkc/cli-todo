@@ -1,3 +1,4 @@
+![Menu](https://raw.githubusercontent.com/ptrkc/cli-todo/main/readme/1.png "Menu")![List](https://raw.githubusercontent.com/ptrkc/cli-todo/main/readme/2.png "List")
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
